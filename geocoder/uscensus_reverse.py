@@ -47,22 +47,22 @@ class USCensusReverseResult(OneResult):
 
     @property
     def block(self):
-        if self.raw['2010 Census Blocks']:
-            return self.raw['2010 Census Blocks'][0].get('NAME')
+        if self.raw['2020 Census Blocks']:
+            return self.raw['2020 Census Blocks'][0].get('NAME')
         elif self.raw['Census Blocks']:
             return self.raw['Census Blocks'][0].get('NAME')
 
     @property
     def blocknumber(self):
-        if self.raw['2010 Census Blocks']:
-            return self.raw['2010 Census Blocks'][0].get('BLOCK')
+        if self.raw['2020 Census Blocks']:
+            return self.raw['2020 Census Blocks'][0].get('BLOCK')
         elif self.raw['Census Blocks']:
             return self.raw['Census Blocks'][0].get('BLOCK')
 
     @property
     def geoid(self):
-        if self.raw['2010 Census Blocks']:
-            return self.raw['2010 Census Blocks'][0].get('GEOID')
+        if self.raw['2020 Census Blocks']:
+            return self.raw['2020 Census Blocks'][0].get('GEOID')
         elif self.raw['Census Blocks']:
             return self.raw['Census Blocks'][0].get('GEOID')
 
